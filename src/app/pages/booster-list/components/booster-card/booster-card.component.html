@@ -1,0 +1,18 @@
+<div class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1 m-2">
+    <a
+        class="p-1 w-96 h-72 flex flex-col items-center bg-gray-800 text-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+
+        <img class="ml-1 object-cover w-full rounded-t-lg h-72 md:h-72 md:w-48 md:rounded-none md:rounded-s-lg"
+            src="{{booster.imageUrl}}" alt="">
+        <div class="flex flex-col justify-between p-4 leading-normal text-white">
+            <h5 class="mb-2 text-left font-bold tracking-tight text-white-900 top-1">{{ booster.name }}</h5>
+            @if(booster.isImageIdent) {
+            <img class="ml-1 w-5  h-5 md:h-5" src="{{booster.urlImageIdent}}" alt="">
+            } @else {
+            <p class="mb-2 text-left font-normal text-white-700 ">{{ booster.manaCost }}</p>
+            }
+            <p class="mb-2 text-sm text-white-700 text-left">{{ booster.text }}</p>
+        </div>
+
+    </a>
+</div>
